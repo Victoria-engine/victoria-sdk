@@ -1,3 +1,3 @@
-import { createClient } from './auth'
+import { VictoriaClient } from './core'
 
-export default { createClient }
+export default { VictoriaClient }

@@ -10,7 +10,7 @@ function checkStatus(response: Response) {
     return Promise.resolve(response.json())
   }
 
-  return response.json().then(json => {
+  return response.json().then((json: any) => {
     /**
      * Parsed error from server response
      * @typedef {Object} ServerError
