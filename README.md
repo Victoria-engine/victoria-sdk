@@ -1,28 +1,35 @@
-<div align="center">
-    <img alt="styled-components" src="./victoria-logo-simple.png" height="150px" />
-</div>
+# Victoria SDK
 
-<br />
+Victoria SDK provides an easy to access interface for frontend applications consuming data from the core API.
 
-<div align="center">
-  <strong>✨ Victoria SDK ✨.</strong>
-  <br />
-  <br />
-</div>
 
-<br />
+## Installation
 
-Victoria SDK provides an easy to access interface for frontends
+```bash
+npm i victoria-sdk
+```
 
+or
+
+
+```bash
+yarn add victoria-sdk
+```
 
 Example usage:
 
 ```ts
-import Victoria from '@victoria/sdk
+
+import Victoria from 'victoria-sdk'
 
 try {
+  const key = 'my_victoria_api_key'
   // Only Specify the domain if you're developing localy
-  const client = await Victoria.createClient({ key: 'my_victoria_api_key', domain: 'http://127.0.0.1:3001' })
+  const domain = 'http://127.0.0.1:3001'
+
+  const victoria = new Victoria.VictoriaClient(key, domain)
+
+  const client = await victoria.createClient()
 
   console.log(client) // blog data
 } catch (err) {
@@ -30,11 +37,11 @@ try {
 }
 ``` 
 
-Getting all of the account posts.
+Getting a post by ID
 
 ```ts
 try {
-  const posts = await Victoria.getPosts()
+  const posts = await client.getPostByID('some_random_post_id')
 
   console.log(posts) // Render posts
 } catch (error) {
