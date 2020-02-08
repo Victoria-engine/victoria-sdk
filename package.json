@@ -1,6 +1,6 @@
 {
   "name": "victoria-sdk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Victoria blog engine sdk",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
