@@ -1,0 +1,47 @@
+{
+  "name": "victoria-sdk",
+  "version": "1.0.2",
+  "description": "Victoria blog engine sdk",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "yarn build",
+    "test": "echo Not implemented yet",
+    "lint": "echo Not implemented yet",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "keywords": [
+    "victoria",
+    "sdk",
+    "blog-engine"
+  ],
+  "author": "@sikozonpc",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.1.1",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.1.0",
+    "typescript": "^3.7.5"
+  }
+}
