@@ -1,6 +1,6 @@
 {
   "name": "victoria-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Victoria blog engine sdk",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,6 +36,10 @@
     "sdk",
     "blog-engine"
   ],
+  "repository": {
+    "url": "https://github.com/Victoria-engine/victoria-sdk",
+    "type": "github"
+  },
   "author": "@sikozonpc",
   "license": "ISC",
   "devDependencies": {
