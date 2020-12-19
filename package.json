@@ -1,6 +1,6 @@
 {
   "name": "victoria-sdk",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Victoria blog engine sdk",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,13 +9,13 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepare": "yarn build",
+    "prepare": "npm run build",
     "test": "echo Not implemented yet",
     "lint": "echo Not implemented yet",
-    "prepublishOnly": "yarn test && yarn lint",
-    "preversion": "yarn lint",
-    "version": "yarn format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "jest": {
     "transform": {

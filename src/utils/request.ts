@@ -1,8 +1,5 @@
 /*
- *
- * Request
- * fetch wrapper
- *
+ * Request fetch wrapper
  */
 
 function checkStatus(response: Response) {
